@@ -1,34 +1,19 @@
-Oblig 3
-=======
-OsloMet brukernavn: s374219
+The application is used for registering movie tickets.
 
-GitHub brukernavn: Djole2404
+It retrieves information from input boxes, stores it in a database located on the server, and displays it back.
 
-Github repo URL: https://github.com/data1700-v23/oblig-3-Djole2404.git
+What we used JavaScript for was to create different functions that ensure the data is saved to the server.
 
-Fullt navn: Dorde Mijajlovic
+The first function, registrerBillett(), does several things: it retrieves information from the input boxes, calls two other functions, and sends the information to the server using the $.post jQuery function.
 
-Kort beskrivelse av applikasjon (5-10 setninger):
+The second function, hentBilletter(), retrieves data from the server by calling the /hentBilletter endpoint and displays it in the form of a table.
 
-Applikasjonen brukes for registrering av kino billetter.
+The third function, slettBilletter(), clears the array and deletes all information from the server.
 
-Den henter informasjoner fra input-bokser, lagrer dem i database som ligger på server og skriver dem ut tilbake.
+The fourth function, sjekkInput(), checks if the user has entered something in the input boxes and displays a message indicating that something must be entered.
 
-Det som vi brukte JavaScript for var opprettelse av forskjellige funksjoner som sørger for at data blir lagret på server
+BilletterController is a controller that essentially controls the server and everything that happens there. I used @PostMapping to save information on the server and @GetMapping to retrieve information from the server.
 
-Første funksjon, registrerBillett(), gjør flere ting:henter informasjon fra input-bokser, kaller to andre funksjoner
-og sender info til server ved bruk av $.post jquery funksjon.
+BilletterRepository is a repository where the SQL part of the project is handled. Three functions are used to process the data in the database.
 
-Andre funksjon, hentBilletter(), henter data fra server ved å kalle /hentBilletter endpoint og skriver den ut i form av tabell.
-
-Tredje funksjon, slettBilletter(), tømmer array og sletter alle informasjon fra server.
-
-Fjerde funksjon, sjekkInput(), sjekker om brukeren har skrevet noe inn i input-bokser og viser beskjed at noe må skrives inn.
-
-BilletterController er en controller som på en måte styrer server og alt som skjer der. Jeg brukte @PostMapping for å lagre info på server
-og @GetMapping for å hente info fra server. 
-
-BilletterRepository er en repository hvor SQL delen av prosjektet blir behandlet. 3 funksjoner er brukt for behandling av data i databasen.
-
-I schema.sql opprettet jeg en tabell hvor data fra nettsiden skal settes inn. 
-
+In schema.sql, I created a table where data from the website will be inserted.
