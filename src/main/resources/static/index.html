@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig3</title>
+    <script src="Oblig3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+<h1><b>Bestilling av kinobiletter</b></h1>
+<form name="Info">
+
+    <div class="form-group">
+    <label for="filmer">Velg film: </label>
+    <select name="filmer" id="filmer" class="form-control">
+        <option value="Velg film her">Velg film her</option>
+        <option value="Don't Worry Darling">Don't worry darling</option>
+        <option value="The Menu">The Menu</option>
+        <option value="Babylon">Babylon</option>
+    </select>
+    </div>
+
+    <div class="form-group">
+        <label for="antall">Antall: </label>
+        <input type="text" id="antall" class="form-control"> <span style="color:darkred" id="feilAntall"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="fornavn">Fornavn: </label>
+        <input id="fornavn" type="text" class="form-control"> <span style="color: darkred" id="feilFornavn"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="etternavn">Etternavn: </label>
+        <input id="etternavn" type="text" class="form-control"> <span style="color:darkred;" id="feilEtternavn"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="telefonnr">Telefonnr: </label>
+        <input id="telefonnr" type="text" class="form-control"> <span style="color: darkred" id="feilTlf"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="epost">Epost: </label>
+        <input id="epost" type="text" class="form-control"><span style="color:darkred;" id="feilEpost"></span>
+    </div>
+
+    </form>
+
+    <button class="btn btn-primary" onclick="registrerBillett()">Kjøp billetter</button>
+    <button class="btn btn-danger"  onclick="slettBilletter()">Slett alle billettene</button>
+
+    <div class="col-md-8">
+        <h2>Alle billetter</h2>
+        <div id="ut"></div>
+    </div>
+
+</div>
+</body>
+</html>
